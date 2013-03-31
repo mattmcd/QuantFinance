@@ -4,7 +4,7 @@
 int main(void)
 {
   double x;
-  std::cout << "Enter a number: " << std::endl;
+  std::cout << "Enter a number: ";
   std::cin >> x;
 
   std::cout << normpdf(x) << std ::endl;

@@ -7,7 +7,7 @@ using std::exp;
 using std::fabs;
 using std::sqrt;
 
-const double oneOverRootTwoPi = 1.0/2.0/3.1415926;
+constexpr double oneOverRootTwoPi = std::sqrt( 1.0/2.0/3.1415926 );
 
 double normpdf(double x)
 {

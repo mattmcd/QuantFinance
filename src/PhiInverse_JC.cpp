@@ -9,6 +9,14 @@ double NormalCDFInverse(double p);
 double RationalApproximation(double t);
 void demo();
 
+// Same interface as Normals.hpp
+double inormcdf( double x )
+{
+  return NormalCDFInverse( x );
+}
+
+// Code from http://www.johndcook.com/cpp_phi_inverse.html
+
 // compute log(1+x) without losing precision for small values of x
 double LogOnePlusX(double x)
 {
@@ -128,8 +136,3 @@ void demo()
     std::cout << "\nMaximum error: " << maxerror << "\n\n";
 }
 
-int main()
-{
-    demo();
-    return 0;
-}

@@ -1,6 +1,23 @@
 #include <iostream>
 #include <cmath>
 
+double phi( double x );
+
+// Same interface as Normals.hpp
+constexpr double oneOverRootTwoPi = std::sqrt( 1.0/2.0/3.1415926 );
+
+double normpdf(double x)
+{
+   return oneOverRootTwoPi*exp(-x*x/2);
+}
+
+double normcdf( double x )
+{
+  return phi(x);
+}
+
+// Code from http://www.johndcook.com/cpp_phi.html
+
 double phi(double x)
 {
     // constants
@@ -60,8 +77,3 @@ void testPhi()
         std::cout << "Maximum error: " << maxError << "\n";
 } 
 
-int main( )
-{
-  testPhi();
-  return 0;
-}

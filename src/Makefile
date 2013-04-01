@@ -1,10 +1,10 @@
-all: test test_JC Phi PhiInverse
+all: test test_JC test_Phi test_PhiInverse
 
-Phi: test_Phi.cpp Phi_JC.cpp
-	g++ -std=c++0x -o Phi test_Phi.cpp 
+test_Phi: test_Phi.cpp Phi_JC.cpp
+	g++ -std=c++0x -o test_Phi test_Phi.cpp 
 
-PhiInverse: test_PhiInverse.cpp PhiInverse_JC.cpp
-	g++ -std=c++0x -o PhiInverse test_PhiInverse.cpp 
+test_PhiInverse: test_PhiInverse.cpp PhiInverse_JC.cpp
+	g++ -std=c++0x -o test_PhiInverse test_PhiInverse.cpp 
 
 test: test.cpp Normals.cpp Normals.hpp
 	g++ -std=c++0x -I. -o test test.cpp Normals.cpp 

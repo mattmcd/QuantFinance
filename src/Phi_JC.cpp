@@ -1,4 +1,4 @@
-
+#include <iostream>
 #include <cmath>
 
 double phi(double x)
@@ -59,3 +59,9 @@ void testPhi()
 
         std::cout << "Maximum error: " << maxError << "\n";
 } 
+
+int main( )
+{
+  testPhi();
+  return 0;
+}

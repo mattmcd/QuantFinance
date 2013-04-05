@@ -1,4 +1,4 @@
-all: test test_JC test_Phi test_PhiInverse
+all: test test_JC test_Phi test_PhiInverse test_PayOff
 
 test_Phi: test_Phi.cpp Phi_JC.cpp
 	$(CXX) -std=c++0x -o test_Phi test_Phi.cpp 
@@ -11,3 +11,6 @@ test: test.cpp Normals.cpp Normals.hpp
 
 test_JC: test.cpp Normals.hpp Phi_JC.cpp PhiInverse_JC.cpp
 	$(CXX) -std=c++0x -I. -o test_JC test.cpp Phi_JC.cpp PhiInverse_JC.cpp
+
+test_PayOff: test_PayOff.cpp PayOff.hpp PayOff.cpp
+	$(CXX) -std=c++0x -I. -o test_PayOff test_PayOff.cpp PayOff.cpp

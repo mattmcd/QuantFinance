@@ -14,3 +14,6 @@ test_JC: test.cpp Normals.hpp Phi_JC.cpp PhiInverse_JC.cpp
 
 test_PayOff: test_PayOff.cpp PayOff.hpp PayOff.cpp
 	$(CXX) -std=c++0x -I. -o test_PayOff test_PayOff.cpp PayOff.cpp
+
+test_Option: test_Option.cpp VanillaOption.hpp PayOff.cpp
+	$(CXX) -std=c++0x -I. -o test_Option test_Option.cpp PayOff.cpp

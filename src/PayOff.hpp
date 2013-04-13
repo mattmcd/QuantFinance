@@ -21,6 +21,7 @@ class AbstractPayOff {
         AbstractPayOff(){} 
         virtual ~AbstractPayOff(){}
         virtual double operator()(double Spot) const = 0;
+        virtual AbstractPayOff* clone() const = 0;
     private:
 };
 
@@ -31,6 +32,7 @@ class PayOffCall : public AbstractPayOff {
         PayOffCall( double Strike_ );
         virtual ~PayOffCall(){}
         virtual double operator()(double Spot) const;
+        virtual PayOffCall* clone() const;
     private:
         double Strike;
 };
@@ -40,6 +42,7 @@ class PayOffPut : public AbstractPayOff {
         PayOffPut( double Strike_ );
         virtual ~PayOffPut(){}
         virtual double operator()(double Spot) const;
+        virtual PayOffPut* clone() const;
     private:
         double Strike;
 };

@@ -17,3 +17,6 @@ test_PayOff: test_PayOff.cpp PayOff.hpp PayOff.cpp
 
 test_Option: test_Option.cpp VanillaOption.hpp PayOff.cpp
 	$(CXX) -std=c++0x -I. -o test_Option test_Option.cpp PayOff.cpp
+
+test_Wrapper: test_Wrapper.cpp PayOff.cpp
+	$(CXX) -std=c++0x -I. -o test_Wrapper test_Wrapper.cpp PayOff.cpp

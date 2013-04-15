@@ -1,4 +1,4 @@
-all: test test_JC test_Phi test_PhiInverse test_PayOff
+all: test test_JC test_Phi test_PhiInverse test_PayOff test_Option test_Wrapper
 
 test_Phi: test_Phi.cpp Phi_JC.cpp
 	$(CXX) -std=c++0x -o test_Phi test_Phi.cpp 

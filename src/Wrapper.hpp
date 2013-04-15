@@ -52,7 +52,7 @@ class Wrapper
       return DataPtr;
     }
 
-    const std::unique_ptr<T> operator->() {
+    std::unique_ptr<T> operator->() const {
       return DataPtr;
     }
 

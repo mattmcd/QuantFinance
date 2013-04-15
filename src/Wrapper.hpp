@@ -10,6 +10,8 @@ class Wrapper
 {
   public:
     Wrapper( ) {
+      // Default constructor is needed to allow use with containers
+      // such as std::vector
       DataPtr = NULL;
     }
 

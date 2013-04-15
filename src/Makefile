@@ -1,4 +1,4 @@
-all: test test_JC test_Phi test_PhiInverse test_PayOff test_Option test_Wrapper
+all: test test_JC test_Phi test_PhiInverse test_PayOff test_Option test_Wrapper test_Random
 
 test_Phi: test_Phi.cpp Phi_JC.cpp
 	$(CXX) -std=c++0x -o test_Phi test_Phi.cpp 
@@ -20,3 +20,6 @@ test_Option: test_Option.cpp VanillaOption.hpp PayOff.cpp
 
 test_Wrapper: test_Wrapper.cpp PayOff.cpp
 	$(CXX) -std=c++0x -I. -o test_Wrapper test_Wrapper.cpp PayOff.cpp
+
+test_Random: testRandom.cpp
+	$(CXX) -std=c++0x -o test_Random testRandom.cpp

@@ -46,11 +46,11 @@ class Wrapper
     }
 
     // Access method of object
-    T* operator->() {
+    std::unique_ptr<T> operator->() {
       return DataPtr;
     }
 
-    const T* operator->() {
+    const std::unique_ptr<T> operator->() {
       return DataPtr;
     }
 

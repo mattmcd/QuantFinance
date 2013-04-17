@@ -23,3 +23,6 @@ test_Wrapper: test_Wrapper.cpp PayOff.cpp
 
 test_Random: testRandom.cpp
 	$(CXX) -std=c++0x -o test_Random testRandom.cpp
+
+test_GBMPath: test_GBMPath.cpp
+	$(CXX) -std=c++0x -I. -o test_GBMPath test_GBMPath.cpp

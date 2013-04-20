@@ -24,3 +24,10 @@ Notes
   also the move constructor and move assignment functions to consider, although
   smart pointers can help reduce required code.
 - The Wrapper class uses template programming to handle the memory management. 
+- GBMPath is a simple geometric Brownian motion generator using the new C++11 random library.
+  The class assumes that an external vector has been created to store the 
+  path, this is then filled by the generator.  Return (Mu) and Volatility (Sigma)
+  parameters are specified as annualized continuous values.
+  This class is similar to the Random classes in Chapter 6 of CDPaDP but simplified by use 
+  of the standard library.  
+- Statistics need to be implemented at the path level and at the option pricing level. 

@@ -26,3 +26,10 @@ test_Random: testRandom.cpp
 
 test_GBMPath: test_GBMPath.cpp
 	$(CXX) -std=c++0x -I. -o test_GBMPath test_GBMPath.cpp
+
+test_Parameter: test_Parameter.cpp parameter.hpp
+	$(CXX) -std=c++0x -I. -o test_Parameter test_Parameter.cpp
+
+test_PayOffCreator: test_PayOffCreator.cpp parameter.hpp payoff_creator.hpp
+	$(CXX) -std=c++0x -I. -o test_PayOffCreator test_PayOffCreator.cpp
+
